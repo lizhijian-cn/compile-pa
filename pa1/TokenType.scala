@@ -9,7 +9,7 @@ object TokenType extends Enumeration {
     override def toString: String = s"Ident($name)"
   }
 
-  case class Integer(value: String) extends TokenType.Value {
+  case class Integer(value: Int) extends TokenType.Value {
     override def id: Int = -2
 
     override def toString: String = s"Int($value)"
