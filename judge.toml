@@ -3,5 +3,5 @@
 image = { source = "dockerfile", path = ".", tag = "pascal-lex-example" }
 
 run = [
-  "java -cp ./:./scala-library.jar:./scala-reflect.jar Main",
+  "java -cp ./:./scala-library.jar:./scala-reflect.jar Main $input",
 ]
