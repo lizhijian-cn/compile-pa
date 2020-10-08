@@ -1,5 +1,4 @@
 import TokenType.TokenType
-
 class Lexer() {
   def parse(in: LazyList[Char]): LazyList[TokenType] = in.headOption.map {
     case ch if isSpace(ch) => parse(in.dropWhile(isSpace(_)))
