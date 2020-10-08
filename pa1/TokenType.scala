@@ -1,7 +1,7 @@
 object TokenType extends Enumeration {
   type TokenType = Value
   val Begin, End, For, If, Then, Else,
-  Colon, Plus, Star, Comma, LParenthesis, RParenthesis, Assign, EOF = Value
+  Colon, Plus, Star, Comma, LParenthesis, RParenthesis, Assign, Unknown, EOF = Value
 
   case class Ident(name: String) extends TokenType.Value {
     override def id: Int = -1

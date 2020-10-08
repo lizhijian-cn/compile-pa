@@ -6,7 +6,7 @@ class Lexer() {
     case ch if ch.isDigit => lexInt(in)
     case ch if ch.isLetter => lexIdentAndKeyword(in)
     case ch if isOperator(ch) => lexOperator(in)
-    case ch => throw new Exception(s"invalid $ch")
+    case _ => TokenType.Unknown #:: LazyList.empty
   }.getOrElse(LazyList.empty)
 
   private def isSpace = " \t\r\n".toCharArray.contains(_)
